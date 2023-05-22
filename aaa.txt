@@ -1,0 +1,88 @@
+@model ExeAdrieleDeboraIII.Models.Funcionario
+@{
+    ViewBag.Title = "Cadastrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Message</h2>
+
+<form action="Cadastro" method="get">
+    <div>
+        <label for="Id">Codigo</label>
+    </div>
+    <div>
+        <input type="number" value="@Model.IdFunc" name="Id" />
+    </div>
+    <br />
+    <div>
+        <label for="Nome">Nome</label>
+        <input type="text" value="@Model.Nome" name="Nome" />
+    </div>
+    <br />
+    <div>
+        <label for="Funcao">Função</label>
+        <input type="text" value="@Model.Funcao" name="Funcao" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Cadastrar" />
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+<h2>@ViewBag.Message</h2>
+<div><b>Código:</b> @ViewBag.Id</div>
+<div><b>Nome:</b> @ViewBag.Nome</div>
+<div><b>Função:</b> @ViewBag.Funcao</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        public ActionResult Cadastrar()
+        {
+
+            Funcionario objfunc = new Funcionario();
+            ViewBag.Message = "Cadastro de Funcionários";
+
+            return View(objfunc);
+        }
+
+        public ActionResult Cadastro(int IdFunc, string Nome, string Funcao)
+        {
+            ViewBag.Message = "Funcionário Cadastrado";
+            ViewBag.Id = IdFunc;
+            ViewBag.Nome = Nome;    
+            ViewBag.Funcao = Funcao;
+            return View();
+        }
+    }
