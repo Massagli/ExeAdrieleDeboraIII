@@ -166,6 +166,7 @@
     <Content Include="Areas\Veiculo\Views\Auto\Carro.cshtml" />
     <Content Include="Areas\Veiculo\Views\Auto\Veiculo.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\conditional.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />

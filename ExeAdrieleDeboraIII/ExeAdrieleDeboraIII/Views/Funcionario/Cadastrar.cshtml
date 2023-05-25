@@ -6,27 +6,30 @@
 
 <h2>@ViewBag.Titulo</h2>
 
+
 <form action="CadastroFunc" method="post">
     <div>
         <label for="IdFunc">Codigo</label>
     </div>
     <div>
-        <input type="number" value="@Model.IdFunc" name="IdFunc" />
+        <input class="txt_id" type="number" value="@Model.IdFunc" name="IdFunc" />
     </div>
     <br />
     <div>
         <label for="Nome">Nome</label>
-        <input type="text" value="@Model.Nome" name="Nome" />
+        <input class="txt_nome" type="text" value="@Model.Nome" name="Nome" />
     </div>
     <br />
     <div>
         <label for="Funcao">Função</label>
-        <input type="text" value="@Model.Funcao" name="Funcao" />
+        <input class="txt_funcao" type="text" value="@Model.Funcao" name="Funcao" />
     </div>
     <br />
     <div>
-        <input type="submit" value="Cadastrar" />
+        <input type="submit" value="Cadastrar" onclick="Cadastrar" />
     </div>
 
 </form>
+
+<script src="~/Scripts/conditional.js"> </script>
 

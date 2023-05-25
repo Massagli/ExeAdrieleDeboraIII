@@ -31,6 +31,8 @@ namespace ExeAdrieleDeboraIII.Controllers
             ViewBag.Nome = func["Nome"];
             ViewBag.Funcao = func["Funcao"];
             return View();
+
+
         }
     }
 }
