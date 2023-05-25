@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExeAdrieleDeboraIII.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -19,6 +20,16 @@ namespace ExeAdrieleDeboraIII.Controllers
         public ActionResult Cadastrar()
         {
             ViewBag.Titulo = "Cadastre um Funcionário";
+            Funcionario func = new Funcionario();
+            return View(func);
+        }
+
+        [HttpPost]
+        public ActionResult CadastroFunc(FormCollection func)
+        {
+            ViewBag.IdFunc = func["IdFunc"];
+            ViewBag.Nome = func["Nome"];
+            ViewBag.Funcao = func["Funcao"];
             return View();
         }
     }

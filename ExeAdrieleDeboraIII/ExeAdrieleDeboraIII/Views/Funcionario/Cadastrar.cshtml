@@ -1,0 +1,32 @@
+﻿@model ExeAdrieleDeboraIII.Models.Funcionario
+@{
+    ViewBag.Title = "Cadastrar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Titulo</h2>
+
+<form action="CadastroFunc" method="post">
+    <div>
+        <label for="IdFunc">Codigo</label>
+    </div>
+    <div>
+        <input type="number" value="@Model.IdFunc" name="IdFunc" />
+    </div>
+    <br />
+    <div>
+        <label for="Nome">Nome</label>
+        <input type="text" value="@Model.Nome" name="Nome" />
+    </div>
+    <br />
+    <div>
+        <label for="Funcao">Função</label>
+        <input type="text" value="@Model.Funcao" name="Funcao" />
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Cadastrar" />
+    </div>
+
+</form>
+
