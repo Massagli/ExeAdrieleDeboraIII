@@ -18,6 +18,8 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Funcionário", "Index", "Funcionario", new { area = "" }, new { @class = "navbar-brand" })</li>
+                    <li>@Html.ActionLink("Cadastrar", "Cadastrar", "Funcionario", new { area = "" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("Moto", "Moto", "Auto", new { area = "Veiculo" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("Carro", "Carro", "Auto", new { area = "Veiculo" }, new { @class = "navbar-brand" })</li>
                     <li>@Html.ActionLink("Veiculo", "Veiculo", "Auto", new { area = "Veiculo" }, new { @class = "navbar-brand" })</li>

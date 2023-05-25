@@ -15,5 +15,11 @@ namespace ExeAdrieleDeboraIII.Controllers
             ViewBag.Message = "Area em desenvolvimento clique em";
             return View();
         }
+
+        public ActionResult Cadastrar()
+        {
+            ViewBag.Titulo = "Cadastre um Funcionário";
+            return View();
+        }
     }
 }

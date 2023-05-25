@@ -52,8 +52,30 @@ namespace ExeAdrieleDeboraIII.Areas.Veiculo.Controllers
         {
             ViewBag.Titulo = "Veiculos";
 
+            Moto moto = new Moto()
+            {
+                Fabricante = "Ducati",
+                Transmissao = "Automatica",
+                Categoria = "Sport",
+                Cilindrada = 998,
 
-            return View();
+            };
+
+            Carro carro = new Carro()
+            {
+                Fabricante = "Chevrollet",
+                Transmissao = "Automatica",
+                Tipo = "Coupe",
+                Nome = "Camaro"
+            };
+
+            ViewBag.Fabricante = carro.Fabricante;
+            ViewBag.Transmissao = carro.Transmissao;
+            ViewBag.Tipo = carro.Tipo;
+            ViewBag.Nome = carro.Nome;
+
+
+            return View(moto);
         }
     }
 }
