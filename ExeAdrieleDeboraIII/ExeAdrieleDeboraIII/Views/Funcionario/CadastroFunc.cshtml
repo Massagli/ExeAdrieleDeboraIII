@@ -4,8 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>CadastroFunc</h2>
+<h2>@ViewBag.Titulo</h2>
 
 <div><b>Código:</b> @ViewBag.IdFunc</div>
 <div><b>Nome:</b> @ViewBag.Nome</div>
 <div><b>Função:</b> @ViewBag.Funcao</div>
+
+
+@Scripts.Render("~/Scripts/conditionals")

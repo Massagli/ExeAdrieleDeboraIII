@@ -4,8 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>@ViewBag.Titulo</h2>
 
+<h4 style=" background:red; color:white;">@TempData["Alerta"]</h4>
 
 <form action="CadastroFunc" method="post">
     <div>
@@ -26,10 +28,10 @@
     </div>
     <br />
     <div>
-        <input type="submit" value="Cadastrar" onclick="Cadastrar" />
+        <input onclick="Cadastrar" type="submit" value="Cadastrar" />
     </div>
 
 </form>
 
-<script src="~/Scripts/conditional.js"> </script>
+@Scripts.Render("~/bundle/conditionals")
 

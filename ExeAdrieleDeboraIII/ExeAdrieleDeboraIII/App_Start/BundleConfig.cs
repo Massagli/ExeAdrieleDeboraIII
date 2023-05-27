@@ -25,6 +25,8 @@ namespace ExeAdrieleDeboraIII
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new Bundle("~/bundle/conditionals").Include("~/Scripts/validation.js"));
         }
     }
 }

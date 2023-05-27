@@ -27,12 +27,50 @@ namespace ExeAdrieleDeboraIII.Controllers
         [HttpPost]
         public ActionResult CadastroFunc(FormCollection func)
         {
+            ViewBag.Titulo = "Funcionário Cadastrado";
+            TempData["Alerta"] = "";
             ViewBag.IdFunc = func["IdFunc"];
             ViewBag.Nome = func["Nome"];
             ViewBag.Funcao = func["Funcao"];
-            return View();
 
+            if (ViewBag.IdFunc == "" && ViewBag.Nome == "" && ViewBag.Funcao == "")
+            {
+                return RedirectToAction("Cadastrar", "Funcionario");
+            }
+            else if (ViewBag.IdFUnc != null && ViewBag.Nome == "" && ViewBag.Funcao == "")
+            {
+                TempData["Alerta"] = "O campo Nome deve ser preenchido!";
+                return RedirectToAction("Cadastrar", "Funcionario");
+            }
+            else if (ViewBag.IdFUnc != null && ViewBag.Nome != null && ViewBag.Funcao == "")
+            {
+                TempData["Alerta"] = "O campo Função deve ser preenchido!";
+                return RedirectToAction("Cadastrar", "Funcionario");
+            }
+            else if (ViewBag.IdFUnc == "" && ViewBag.Nome != null && ViewBag.Funcao != null)
+            {
+                TempData["Alerta"] = "O campo Código deve ser preenchido!";
+                return RedirectToAction("Cadastrar", "Funcionario");
+            }
+            else if (ViewBag.IdFUnc != null && ViewBag.Nome == "" && ViewBag.Funcao != null)
+            {
+                TempData["Alerta"] = "O campo Nome deve ser preenchido!";
+                return RedirectToAction("Cadastrar", "Funcionario");
+            }
+            else
+            {
+                return View();
+            }
+
+            
+            
+                
+            
+
+            
 
         }
+
+
     }
 }
