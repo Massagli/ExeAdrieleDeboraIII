@@ -1,0 +1,23 @@
+﻿@model ExeAdrieleDeboraIII.Models.Notas
+@{
+    ViewBag.Title = "Nota";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Titulo</h2>
+
+<br />
+
+<form action="Resultado" method="post">
+    <div style=" display:flex; flex-direction:row;">
+        <h3>Digite a quantidade de erros: </h3> 
+        <input class="txt_numero" type="number" value="@Model.Valor" name="Valor" />
+    </div>
+
+    <br />
+       
+    <div>
+        <input type="submit" value="Calcular" />
+    </div>
+
+</form>
